@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientação ao Objeto</title>
+</head>
+<body>
+    <script>
+        var meuCarro = new Carro('vermelho', 250);
+        var oponente = new Carro('azul', 300);
+
+        function Carro(cor, velocMaxima){
+            this.cor = cor;
+            this.velocMaxima = velocMaxima;
+            this.velocAtual = 0;
+
+            this.acelerar = function() {
+                this.velocAtual += 10;
+            }
+        }
+        meuCarro.acelerar();
+
+        document.write(meuCarro.cor + ': ' + meuCarro.velocAtual);
+        document.write('<br>');
+        document.write(oponente.cor + ': ' + oponete.velocAtual);
+    </script>
+</body>
+</html>
